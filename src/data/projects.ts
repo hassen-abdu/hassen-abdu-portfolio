@@ -54,33 +54,33 @@ export const projectsData: Project[] = [
     ],
     images: [
       {
-        url: "/images/projects/mizan-shop/01-storefront.jpg",
+        url: `${import.meta.env.BASE_URL}images/projects/mizan-shop/01-storefront.jpg`,
         caption: "MIZAN SHOP Homepage - B2B Marketplace & Mobile Phones Sourcing Storefront",
         category: "Storefront",
         isCover: true
       },
       {
-        url: "/images/projects/mizan-shop/02-megamenu.jpg",
+       url: `${import.meta.env.BASE_URL}images/projects/mizan-shop/02-megamenu.jpg`,
         caption: "Storefront Navigation - Goods, Building Materials & Electronics Megamenu with Sourcing Modal",
         category: "Megamenu"
       },
       {
-        url: "/images/projects/mizan-shop/03-admin-login.jpg",
+        url: `${import.meta.env.BASE_URL}images/projects/mizan-shop/03-admin-login.jpg`,
         caption: "Firebase Admin Portal - Secure Administrator Sign-In Interface",
         category: "Authentication"
       },
       {
-        url: "/images/projects/mizan-shop/04-admin-dashboard.jpg",
+        url: `${import.meta.env.BASE_URL}images/projects/mizan-shop/04-admin-dashboard.jpg`,
         caption: "Admin Control Center - Real-Time Dashboard Metrics, Total Orders & Revenue Stats",
         category: "Dashboard"
       },
       {
-        url: "/images/projects/mizan-shop/05-product-manager.jpg",
+        url: `${import.meta.env.BASE_URL}images/projects/mizan-shop/05-product-manager.jpg`,
         caption: "Product Catalog Management - Multilingual Product Entry & Firebase Storage Image Uploader",
         category: "Dashboard"
       },
       {
-        url: "/images/projects/mizan-shop/06-order-management.jpg",
+        url: `${import.meta.env.BASE_URL}images/projects/mizan-shop/06-order-management.jpg`,
         caption: "Customer Orders Dashboard - Real-time Checkout Order Processing & Shipping Fulfillment Table",
         category: "Dashboard"
       }
@@ -140,18 +140,18 @@ export const projectsData: Project[] = [
     ],
     images: [
       {
-        url: "/images/projects/jenet-engenagn/01-homepage.jpg",
+        url: `${import.meta.env.BASE_URL}images/projects/jenet-engenagn/01-homepage.jpg`,
         caption: "Jenet Engenagn Public Website - Empowering Communities Hero Section & Impact Stats",
         category: "Website",
         isCover: true
       },
       {
-        url: "/images/projects/jenet-engenagn/02-projects-amharic.jpg",
+        url: `${import.meta.env.BASE_URL}images/projects/jenet-engenagn/02-projects-amharic.jpg`,
         caption: "Development Projects Page - Community Initiatives in Amharic Interface (የልማት ፕሮጀክቶቻችን)",
         category: "Projects"
       },
       {
-        url: "/images/projects/jenet-engenagn/03-cms-dashboard.jpg",
+        url: `${import.meta.env.BASE_URL}images/projects/jenet-engenagn/03-cms-dashboard.jpg`,
         caption: "Jenet Charity CMS Dashboard - Multilingual News Manager (English, Amharic, Arabic)",
         category: "CMS"
       }

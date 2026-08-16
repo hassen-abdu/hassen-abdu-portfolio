@@ -64,7 +64,7 @@ export const About: React.FC = () => {
               >
                 <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-500 to-sky-500 rounded-2xl blur-sm opacity-50 group-hover:opacity-100 transition duration-300" />
                 <img
-                  src="/images/profile.jpg"
+                  src={`${import.meta.env.BASE_URL}images/profile.jpg`}
                   alt="Hassen Abdu"
                   className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover border-2 border-zinc-800 shadow-2xl group-hover:scale-105 transition-transform duration-300"
                   onError={(e) => {

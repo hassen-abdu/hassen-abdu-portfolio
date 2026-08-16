@@ -47,7 +47,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({ isOpen, onClose }) =
         <div className="relative inline-block mx-auto mt-2">
           <div className="absolute -inset-2 bg-gradient-to-r from-emerald-500 to-sky-500 rounded-full blur-md opacity-70" />
           <img
-            src="/images/profile.jpg"
+            src={`${import.meta.env.BASE_URL}images/profile.jpg`}
             alt={contactConfig.name}
             className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full object-cover border-4 border-zinc-800 shadow-2xl mx-auto"
             onError={(e) => {

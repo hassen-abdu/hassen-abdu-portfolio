@@ -66,7 +66,7 @@ export const Hero: React.FC = () => {
               >
                 <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-sky-500 rounded-full blur-sm opacity-60 group-hover:opacity-100 transition duration-300" />
                 <img
-                  src="/images/profile.jpg"
+                  src={`${import.meta.env.BASE_URL}images/profile.jpg`}
                   alt="Hassen Abdu - Web Developer & Full-Stack Web Application Developer"
                   className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-zinc-800 shadow-xl group-hover:scale-105 transition-transform duration-300"
                   onError={(e) => {
