@@ -51,11 +51,11 @@ export const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center justify-between gap-2 min-w-0">
           {/* Logo & Name */}
           <a
             href="#home"
-            className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-lg p-1 shrink-0"
+            className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-lg p-1 shrink-0 min-w-0"
             id="nav-logo"
           >
             <div className="w-9 h-9 rounded-lg bg-zinc-900 border border-zinc-700/80 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/50 group-hover:bg-zinc-800/80 transition-all shadow-inner">
@@ -133,12 +133,12 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile Actions: Language + Menu Toggle */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-1.5 sm:hidden shrink-0">
             {/* Mobile Language Toggle */}
             <div className="flex items-center bg-zinc-900/90 border border-zinc-800 rounded-lg p-0.5 text-xs font-medium">
               <button
                 onClick={() => setLanguage("en")}
-                className={`px-2 py-1 rounded transition-all ${
+                className={`px-1.5 py-1 rounded transition-all ${
                   language === "en"
                     ? "bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30"
                     : "text-zinc-400"
