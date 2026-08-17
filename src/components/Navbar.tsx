@@ -51,17 +51,17 @@ export const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-2 min-w-0">
+       <div className="relative flex items-center w-full min-w-0">
           {/* Logo & Name */}
           <a
             href="#home"
-            className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-lg p-1 shrink-0 min-w-0"
+            className="flex items-center gap-2.5 pr-28 min-w-0"
             id="nav-logo"
           >
             <div className="w-9 h-9 rounded-lg bg-zinc-900 border border-zinc-700/80 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/50 group-hover:bg-zinc-800/80 transition-all shadow-inner">
               <Code2 className="w-4 h-4" />
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col min-w-0">
               <span className="font-display font-bold text-lg tracking-tight text-zinc-100 group-hover:text-white transition-colors">
                 {contactConfig.name}
               </span>
@@ -131,43 +131,48 @@ export const Navbar: React.FC = () => {
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
+            {/* Mobile Actions: Language + Menu Toggle */}
+<div className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center gap-2 md:hidden z-10">
+  {/* Mobile Language Toggle */}
+  <div className="flex items-center bg-zinc-900/90 border border-zinc-800 rounded-lg p-0.5 text-xs font-medium shrink-0">
+    <button
+      onClick={() => setLanguage("en")}
+      className={`px-2 py-1 rounded transition-all ${
+        language === "en"
+          ? "bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30"
+          : "text-zinc-400"
+      }`}
+    >
+      EN
+    </button>
 
-          {/* Mobile Actions: Language + Menu Toggle */}
-          <div className="flex items-center gap-1.5 sm:hidden shrink-0">
-            {/* Mobile Language Toggle */}
-            <div className="flex items-center bg-zinc-900/90 border border-zinc-800 rounded-lg p-0.5 text-xs font-medium">
-              <button
-                onClick={() => setLanguage("en")}
-                className={`px-1.5 py-1 rounded transition-all ${
-                  language === "en"
-                    ? "bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30"
-                    : "text-zinc-400"
-                }`}
-              >
-                EN
-              </button>
-              <button
-                onClick={() => setLanguage("am")}
-                className={`px-2 py-1 rounded transition-all ${
-                  language === "am"
-                    ? "bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30"
-                    : "text-zinc-400"
-                }`}
-              >
-                አማ
-              </button>
-            </div>
+    <button
+      onClick={() => setLanguage("am")}
+      className={`px-2 py-1 rounded transition-all ${
+        language === "am"
+          ? "bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30"
+          : "text-zinc-400"
+      }`}
+    >
+      አማ
+    </button>
+  </div>
 
-            {/* Mobile Hamburger Toggle */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
-              aria-label="Toggle mobile menu"
-              id="nav-mobile-toggle"
-            >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-          </div>
+  {/* Mobile Hamburger */}
+  <button
+    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+    className="w-11 h-11 flex items-center justify-center rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 shrink-0"
+    aria-label="Toggle mobile menu"
+    id="nav-mobile-toggle"
+  >
+    {mobileMenuOpen ? (
+      <X className="w-5 h-5" />
+    ) : (
+      <Menu className="w-5 h-5" />
+    )}
+  </button>
+</div>
+         
         </div>
       </div>
 
